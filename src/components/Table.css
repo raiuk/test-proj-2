@@ -1,0 +1,64 @@
+.table-wrapper {
+    margin: 10px;
+    min-width: 800px;
+}
+
+.add-row {
+    background: white;
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 200px;
+    padding: 10px;
+}
+
+.add-row, button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 5px;
+}
+
+.save-btn {
+    margin-top: 20px;
+    height: 30px;
+    width: 120px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+.cell {
+    width: 450px;
+}
+
+.cell:last-child {
+    border-right: none;
+}
+
+.id-cell {
+    min-width: 100px;
+    border-left: none;
+}
+
+table, th, td, .add-row-wrapper {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-weight: 300;
+}
+
+.add-row-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+thead .id-cell, thead .cell {
+    border-top: none;
+}
+
