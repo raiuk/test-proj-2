@@ -55,7 +55,7 @@ const CustomOption = ({index, levelIndex, optionsArr, option}: CustomOptionProps
             }}
             value={option?.id ?? ''}
           /> :
-          <span>{option?.id ?? ''}</span>
+          <span key={`${index}-${levelIndex}`}>{option?.id ?? ''}</span>
       }
     </td>
   )
@@ -100,7 +100,8 @@ const VirtualTable = ({
       <FixedSizeList
         {...rest}
         innerElementType={Inner}
-        overscanCount={50}
+        initialScrollOffset={50}
+        overscanCount={0}
         onItemsRendered={props => {
           const style =
             listRef.current &&
